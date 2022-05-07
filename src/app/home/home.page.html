@@ -1,20 +1,62 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Point Of Interest
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Point of interest</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Connaught</ion-card-subtitle>
+      <ion-card-title>Galway</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+     Welcome to Connaught!
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      
+      <ion-label>Check out Galway </ion-label>
+      <ion-button color="success" [routerLink] = "['/connaught']" routerDirection="forward"> VIEW </ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+    </ion-item>
+  
+    <ion-card-content>
+      <img src="assets\Connaught images\Galway.jpg">
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item [routerLink] = "['/point-of-interests']" routerDirection="forward" class="ion-activated">
+      <ion-icon name="wifi" slot="start"></ion-icon>
+      <ion-label>Point of interests</ion-label>
+    </ion-item>
+  
+    <ion-item [routerLink] = "['/resturants-cafe']" routerDirection="forward" class="ion-activated" class="ion-activated">
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label>Resturants/Cafe</ion-label>
+    </ion-item>
+  
+    <ion-item [routerLink] = "['/bnb']" routerDirection="forward" class="ion-activated" class="ion-activated">
+      <ion-icon name="bed-outline" slot="start"></ion-icon>
+      <ion-label>B&B</ion-label>
+    </ion-item>
+  
+    <ion-item [routerLink] = "['/walks']" routerDirection="forward" class="ion-activated" class="ion-activated">
+      <ion-icon name="walk" slot="start"></ion-icon>
+      <ion-label>Walks</ion-label>
+    </ion-item>
+  </ion-card> 
+  </ion-content>
+
+
